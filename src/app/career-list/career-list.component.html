@@ -1,4 +1,77 @@
+<div class="container">
+<header>
+<p> Hello, {{ currentUser.fullName }}. </p>
+
 <button (click)="logMeOutPls()"> Log Out </button>
-  <p *ngIf="logoutError" class="error">
-    {{ logoutError }}
-  </p>
+<p *ngIf="logoutError" class="error">
+  {{ logoutError }}
+</p>
+</header>
+<div class="row">
+<h2> Career List </h2>
+
+<p *ngIf="careerListError" class="error">
+{{ careerListError }}
+</p>
+
+<button *ngIf="!isShowingForm" (click)="showCareerForm()">
+Add Career
+</button>
+
+<div class="row">
+<div *ngIf="isShowingForm">
+<h3> Add a New Career </h3>
+
+<p *ngIf="saveError" class="error">
+  {{ saveError }}
+</p>
+
+<form (ngSubmit)="saveNewCareer()">
+  <label for="career-name-input"> Career Name </label>
+  <input  id="career-name-input" type="text" placeholder="First Career"
+      [(ngModel)]="careerInfo.careerName" name="careerName">
+  <br>
+
+  <label for="career-certification-input"> Certification </label>
+  <input  id="careerCertification-input" type="text" placeholder="Certification"
+      [(ngModel)]="careerInfo.careerCertification" name="careerCertification">
+  <br>
+
+  <label for="career-resource-input"> Resource </label>
+  <input  id="career-resource-input" type="text" placeholder="resource"
+      [(ngModel)]="careerInfo.careerResource" name="careerResource">
+  <br>
+
+  <label for="career-picture-input"> Picture (optional)</label>
+  <input  id="career-picture-input" type="file" name="careerPicture"
+      ng2FileSelect [uploader]="myCoolUploader">
+  <br>
+
+  <button> Save Career </button>
+</form>
+</div>
+</div>
+</div>
+
+<div *ngFor="let oneCareer of careerArray" class="row">
+        					<div *ngFor="let oneCareer of careerArray">
+                    <div>
+                      <img *ngIf="oneCareer.picture"
+                          [src]="baseUrl + oneCareer.picture">
+                          </div>
+                             <h3>{{ oneCareer.name }}</h3>
+                             <p>
+                             <b *ngIf="oneCareer.user?._id === currentUser._id">
+                             {{ oneCareer.user?.fullName }}
+                           </b>
+                         </p>
+        							  <h4>{{ oneCareer.certification }}</h4>
+                        <h4>{{ oneCareer.resource }}</h4>
+
+        					 </div>
+
+			     </div>
+
+
+
+</div>

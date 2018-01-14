@@ -7,6 +7,8 @@ import { FileUploadModule } from "ng2-file-upload";
 
 //!--SERVICE
 import { AuthService } from './services/auth.service';
+import { CareerServiceService } from './services/career-service.service';
+
 //!---------
 
 import { AppRoutingModule } from './app-routing.module';
@@ -14,6 +16,7 @@ import { AppRoutingModule } from './app-routing.module';
 //--COMPONENTS
 import { AppComponent } from './app.component';
 import { CareerListComponent } from './career-list/career-list.component';
+//import { NavbarComponent } from './navbar/navbar.component';
 import { AuthPageComponent  } from './auth-page/auth-page.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 
@@ -23,7 +26,9 @@ import { NotFoundComponent } from './not-found/not-found.component';
     AppComponent,
     CareerListComponent,
     AuthPageComponent,
-    NotFoundComponent
+    NotFoundComponent,
+  //  NavbarComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -35,7 +40,8 @@ import { NotFoundComponent } from './not-found/not-found.component';
 
   ],
   providers: [
-  AuthService
+  AuthService,
+  CareerServiceService
 
   ],
 

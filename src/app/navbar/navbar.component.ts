@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { environment } from '../../environments/environment';
 import { Router, ActivatedRoute } from '@angular/router';
+import { AuthService } from '../services/auth.service';
 
 @Component({
   selector: 'app-navbar',
@@ -9,9 +9,13 @@ import { Router, ActivatedRoute } from '@angular/router';
 })
 export class NavbarComponent implements OnInit {
 
-  constructor() { }
 
   ngOnInit() {
-  }
+
+   } // close ngOnInit()
+
+
+
+
 
 }
