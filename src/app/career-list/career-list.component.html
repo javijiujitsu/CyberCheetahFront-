@@ -1,11 +1,17 @@
 <div class="container">
 <header>
+
+  <h2 *ngIf="isShowingButton" >
+  Admin Mode
+  </h2>
+
 <p> Hello, {{ currentUser.fullName }}. </p>
 
 <button (click)="logMeOutPls()"> Log Out </button>
 <p *ngIf="logoutError" class="error">
   {{ logoutError }}
 </p>
+
 </header>
 <div class="row">
 <h2> Career List </h2>
@@ -14,7 +20,7 @@
 {{ careerListError }}
 </p>
 
-<button *ngIf="!isShowingForm" (click)="showCareerForm()">
+<button *ngIf="!isShowingForm && isShowingButton" (click)="showCareerForm()">
 Add Career
 </button>
 

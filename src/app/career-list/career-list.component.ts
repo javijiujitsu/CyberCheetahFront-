@@ -21,6 +21,7 @@ export class CareerListComponent implements OnInit {
     careerListError: string;
 
     isShowingForm: boolean = false;
+    isShowingButton: boolean = false;
 
     careerInfo = {
     careerName: "",
@@ -48,6 +49,9 @@ baseUrl = environment.apiBase;
       .then((userFromApi) => {
           this.currentUser = userFromApi;
           this.getThemCareers();
+          this.showCareerButton();
+          console.log("user = ", this.currentUser);
+          console.log("button = ", this.isShowingButton);
       })
       .catch(() => {
           this.routerThang.navigate(['/']);
@@ -77,8 +81,17 @@ baseUrl = environment.apiBase;
     } // close getThemCareers()
 
     showCareerForm() {
-        this.isShowingForm = true;
+        if(this.currentUser.fullName === "Javier Buitrago"){
+          this.isShowingForm = true;
+        }
       } // close showCareerForm()
+
+      showCareerButton() {
+          console.log("full name = ", this.currentUser.fullName);
+          if(this.currentUser.fullName === "Javier Buitrago"){
+            this.isShowingButton = true;
+          }
+        } // close showCareerForm()
 
       saveNewCareer() {
       // if no picture, regular AJAX upload
