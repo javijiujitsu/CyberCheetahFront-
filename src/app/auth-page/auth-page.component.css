@@ -108,6 +108,14 @@ a{
 	color: #7cbcd6;
 	text-shadow: 0px 1px 1px rgba(255,255,255,0.8);
 }
+
+.logo-responsive {
+  height: auto;
+  width: auto;
+  max-height: 200px;
+  max-height: 200px;
+}
+
 .container > header h2{
 	font-size: 16px;
 	font-style: italic;
@@ -224,7 +232,7 @@ a.hiddenanchor{
 #wrapper h1{
     background: -webkit-repeating-linear-gradient(-45deg,
 	rgb(18, 83, 93) ,
-	rgb(18, 83, 93) 20px,
+	rgba(118, 111, 64, 0.79) 20px,
 	rgb(64, 111, 118) 20px,
 	rgb(64, 111, 118) 40px,
 	rgb(18, 83, 93) 40px);
@@ -316,7 +324,7 @@ input {
 #wrapper p.button input{
 	width: 30%;
 	cursor: pointer;
-	background: rgb(61, 157, 179);
+	background: rgb(179, 154, 61);
 	padding: 8px 5px;
 	font-family: 'BebasNeueRegular','Arial Narrow',Arial,sans-serif;
 	color: #fff;
@@ -429,7 +437,7 @@ p.change_link{
 	font-weight: bold;
 	background: rgb(247, 248, 241);
 	padding: 2px 6px;
-	color: rgb(29, 162, 193);
+	color: rgb(193, 175, 29);
 	margin-left: 10px;
 	text-decoration: none;
 	-webkit-border-radius: 4px;
