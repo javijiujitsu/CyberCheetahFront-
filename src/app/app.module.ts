@@ -16,7 +16,8 @@ import { AppRoutingModule } from './app-routing.module';
 //--COMPONENTS
 import { AppComponent } from './app.component';
 import { CareerListComponent } from './career-list/career-list.component';
-//import { NavbarComponent } from './navbar/navbar.component';
+import { HomePageComponent } from './home-page/home-page.component';
+// import { NavbarComponent } from './navbar/navbar.component';
 import { AuthPageComponent  } from './auth-page/auth-page.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 
@@ -26,7 +27,9 @@ import { NotFoundComponent } from './not-found/not-found.component';
     AppComponent,
     CareerListComponent,
     AuthPageComponent,
+    HomePageComponent,
     NotFoundComponent,
+
   //  NavbarComponent,
 
   ],

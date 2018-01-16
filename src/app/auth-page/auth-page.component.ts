@@ -37,7 +37,7 @@ export class AuthPageComponent implements OnInit {
     this.authThang.checklogin()
       // If success, we are logged in.
       .then((resultFromApi) => {
-          this.routerThang.navigate(['/careers']);
+          this.routerThang.navigate(['/home-page']);
       })
 
       // Even if you don't do anything on error, catch to avoid a console error.
@@ -60,7 +60,7 @@ export class AuthPageComponent implements OnInit {
           this.errorMessage = "";
 
           // redirect to /camels
-          this.routerThang.navigate(['/careers']);
+          this.routerThang.navigate(['/home-page']);
       })
       .catch((err) => {
           const parsedError = err.json();
@@ -81,7 +81,7 @@ export class AuthPageComponent implements OnInit {
           this.loginErrorMessage = "";
 
           // redirect to /camels
-          this.routerThang.navigate(['/careers']);
+          this.routerThang.navigate(['/home-page']);
       })
       .catch((err) => {
           const parsedError = err.json();

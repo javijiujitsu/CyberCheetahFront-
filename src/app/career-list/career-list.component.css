@@ -1,0 +1,77 @@
+
+
+.error {
+  padding: 15px;
+  border: 2px solid crimson;
+  border-radius: 3px;
+  display: inline-block;
+  color: crimson;
+}
+
+ul {
+  padding-left: 0;
+  list-style: none;
+  overflow: auto;
+}
+
+li {
+  float: left;
+}
+
+.picture-wrap {
+  width: 200px;
+  height: 250px;
+}
+
+img {
+  max-width: 100%;
+}
+
+.jumbotron-fluid {
+    background:
+    linear-gradient(to left bottom,
+    rgba(300, 300, 300, 0),
+    rgba(300, 300, 300, 1)),
+    url(http://elevatedbilling.com/wp-content/uploads/2015/10/US-College-Students-Now-Use-More-Marijuana-Than-Cigarettes.jpg);
+    background-size: cover;
+    min-height: 600px;
+    color: #e61be0a6;
+}
+
+.display-2 {
+    font-weight: bold;
+    text-shadow: 1px 1px 4px #696969;
+}
+
+body {
+ font-size: 18px;
+}
+.orange-circle-button {
+	box-shadow: 2px 4px 0 2px rgba(0,0,0,0.1);
+	border: .5em solid #e61be0a6;
+	font-size: 1em;
+	line-height: 1.1em;
+	color: #ffffff;
+	background-color:#e61be0a6;
+	margin: auto;
+	border-radius: 50%;
+	height: 7em;
+	width: 7em;
+	position: relative;
+}
+.orange-circle-button:hover {
+	color:#ffffff;
+    background-color: #e61be0a6;
+	text-decoration: none;
+	border-color: #e61be0a6;
+
+}
+.orange-circle-button:visited {
+	color:#ffffff;
+    background-color: #e61be0a6;
+	text-decoration: none;
+
+}
+.orange-circle-link-greater-than {
+    font-size: 1em;
+}
