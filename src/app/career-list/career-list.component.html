@@ -4,6 +4,7 @@
   	<div class="row">
           <div class="col-md-12">
   		    <button class="btn btn-default orange-circle-button" [routerLink]="['/home-page']">Back<br />Home<br /><span class="orange-circle-greater-than">></span></button>
+          
 
           </div>
   	</div>
@@ -14,89 +15,82 @@
 </div>
 
 <div class="container">
-	<div class="row">
-		<h2>Create a career that you want to track</h2>
-	</div>
-</div>
-<div class="container">
-<header>
-  <h2 *ngIf="isShowingButton" >
-  Admin Mode
-  </h2>
-
-<p> Hello, {{ currentUser.fullName }}. </p>
-
-<button (click)="logMeOutPls()"> Log Out </button>
-<p *ngIf="logoutError" class="error">
-  {{ logoutError }}
-</p>
-
-</header>
+    <div class="page-header">
+        <h2 class="title">Create a career that you want to track</h2>
+    </div>
 <div class="row">
-<h2> Career List </h2>
-
-<p *ngIf="careerListError" class="error">
-{{ careerListError }}
-</p>
-
-<button *ngIf="!isShowingForm && isShowingButton" (click)="showCareerForm()">
-Add Career
-</button>
-
-<div class="row">
-<div *ngIf="isShowingForm">
-<h3> Add a New Career </h3>
-
-<p *ngIf="saveError" class="error">
-  {{ saveError }}
-</p>
-
-<form (ngSubmit)="saveNewCareer()">
-  <label for="career-name-input"> Career Name </label>
-  <input  id="career-name-input" type="text" placeholder="First Career"
-      [(ngModel)]="careerInfo.careerName" name="careerName">
-  <br>
-
-  <label for="career-certification-input"> Certification </label>
-  <input  id="careerCertification-input" type="text" placeholder="Certification"
-      [(ngModel)]="careerInfo.careerCertification" name="careerCertification">
-  <br>
-
-  <label for="career-resource-input"> Resource </label>
-  <input  id="career-resource-input" type="text" placeholder="resource"
-      [(ngModel)]="careerInfo.careerResource" name="careerResource">
-  <br>
-
-  <label for="career-picture-input"> Picture (optional)</label>
-  <input  id="career-picture-input" type="file" name="careerPicture"
-      ng2FileSelect [uploader]="myCoolUploader">
-  <br>
-
-  <button> Save Career </button>
-</form>
+    <div class="col-sm-12">
+      <div class="col-padding">
+        <h2 *ngIf="isShowingButton" >
+        Admin Mode
+        </h2>
+        <p> Hello, {{ currentUser.fullName }}. </p>
+        <button *ngIf="!isShowingForm && isShowingButton" (click)="showCareerForm()">
+        Add Career
+        </button>
+      </div>
+    </div>
 </div>
+    <div class="row grid-divider">
+      <div class="col-sm-4">
+          <div class="col-padding">
+            <div *ngIf="isShowingForm">
+            <h3> Add a New Career </h3>
+
+            <p *ngIf="saveError" class="error">
+              {{ saveError }}
+            </p>
+
+            <form (ngSubmit)="saveNewCareer()">
+              <label for="career-name-input"> Career Name </label>
+              <input  id="career-name-input" type="text" placeholder="First Career"
+                  [(ngModel)]="careerInfo.careerName" name="careerName">
+              <br>
+
+              <label for="career-certification-input"> Certification </label>
+              <input  id="careerCertification-input" type="text" placeholder="Certification"
+                  [(ngModel)]="careerInfo.careerCertification" name="careerCertification">
+              <br>
+
+              <label for="career-resource-input"> Resource </label>
+              <input  id="career-resource-input" type="text" placeholder="resource"
+                  [(ngModel)]="careerInfo.careerResource" name="careerResource">
+              <br>
+
+              <label for="career-picture-input"> Picture (optional)</label>
+              <input  id="career-picture-input" type="file" name="careerPicture"
+                  ng2FileSelect [uploader]="myCoolUploader">
+              <br>
+
+              <button> Save Career </button>
+            </form>
+            </div>
+          </div>
+        </div>
+    </div>
 </div>
-</div>
-
-<div *ngFor="let oneCareer of careerArray" class="row">
-        					<div *ngFor="let oneCareer of careerArray">
-                    <div>
-                      <img *ngIf="oneCareer.picture"
-                          [src]="baseUrl + oneCareer.picture">
-                          </div>
-                             <h3>{{ oneCareer.name }}</h3>
-                             <p>
-                             <b *ngIf="oneCareer.user?._id === currentUser._id">
-                             {{ oneCareer.user?.fullName }}
-                           </b>
-                         </p>
-        							  <h4>{{ oneCareer.certification }}</h4>
-                        <h4>{{ oneCareer.resource }}</h4>
-
-        					 </div>
-
-			     </div>
 
 
 
-</div>
+
+
+
+
+     <p *ngIf="careerListError" class="error">  {{ careerListError }}</p>
+     <div class="container">
+       <div class="row">
+         <h1> Career List </h1>
+       <div class="row">
+      <div *ngFor="let oneCareer of careerArray" class="col-sm-3">
+                    <img *ngIf="oneCareer.picture" class="logo-responsive"
+                    [src]="baseUrl + oneCareer.picture">
+                    <h3>{{ oneCareer.name }}</h3>
+                    <b *ngIf="oneCareer.user?._id === currentUser._id">
+                            {{ oneCareer.user?.fullName }}
+                            </b>
+                    <h4>{{ oneCareer.certification }}</h4>
+                    <h4>{{ oneCareer.resource }}</h4>
+               </div>
+          </div>
+        </div>
+      </div>

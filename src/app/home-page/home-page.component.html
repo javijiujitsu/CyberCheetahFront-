@@ -11,10 +11,8 @@
       </div>
       <div class="collapse navbar-collapse" id="myNavbar">
         <ul class="nav navbar-nav navbar-right">
-          <li><a href="#feature">Features</a></li>
-          <li><a href="#organisations">Organisations</a></li>
-          <li><a href="#courses"> Careers</a></li>
-          <li><a >Logout</a></li>
+        
+          <li><a (click)="logMeOutPls()" >Logout</a></li>
           <li class="btn-trial"><a [routerLink]="['/careers']">Create Careers</a></li>
         </ul>
       </div>
@@ -48,8 +46,8 @@
      <div class="container">
        <div class="row">
          <div class="header-section text-center">
-           <h2>Features</h2>
-           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem nesciunt vitae,<br> maiores, magni dolorum aliquam.</p>
+           <h2>IT Careers</h2>
+           <p>Come learn about the latest careers and technologies in the IT Industry</p>
            <hr class="bottom-line">
          </div>
          <div class="feature-info">
@@ -57,7 +55,7 @@
              <div class="col-md-4">
                <div class="heading pull-right">
                  <h4>Latest Technologies</h4>
-                 <p>Donec et lectus bibendum dolor dictum auctor in ac erat. Vestibulum egestas sollicitudin metus non urna in eros tincidunt convallis id id nisi in interdum.</p>
+                 <p>Learn some of the latest techologies like Golang, AWS Redshift,and Puppet</p>
                </div>
                <div class="fea-img pull-left">
                  <i class="fa fa-css3"></i>
@@ -67,8 +65,8 @@
            <div class="fea">
              <div class="col-md-4">
                <div class="heading pull-right">
-                 <h4>Toons Background</h4>
-                 <p>Donec et lectus bibendum dolor dictum auctor in ac erat. Vestibulum egestas sollicitudin metus non urna in eros tincidunt convallis id id nisi in interdum.</p>
+                 <h4>Certifcations</h4>
+                 <p>Learn about some of the best IT certificaitons like CISSP, AWS Solution Architecht, and Salesforce Architecht</p>
                </div>
                <div class="fea-img pull-left">
                  <i class="fa fa-drupal"></i>
@@ -78,8 +76,8 @@
            <div class="fea">
              <div class="col-md-4">
                <div class="heading pull-right">
-                 <h4>Award Winning Design</h4>
-                 <p>Donec et lectus bibendum dolor dictum auctor in ac erat. Vestibulum egestas sollicitudin metus non urna in eros tincidunt convallis id id nisi in interdum.</p>
+                 <h4>Background</h4>
+                 <p>Learn the proper steps in order to set yourself up for success</p>
                </div>
                <div class="fea-img pull-left">
                  <i class="fa fa-trophy"></i>
@@ -91,3 +89,68 @@
      </div>
    </section>
    <!--/ feature-->
+
+   <section id="work-shop" class="section-padding">
+    <div class="container">
+      <div class="row">
+        <div class="header-section text-center">
+          <h2>Upcoming Online Workshop</h2>
+          <p>Learn about some of the upcoming online workshops </p>
+          <hr class="bottom-line">
+        </div>
+        <div class="col-md-4 col-sm-6">
+          <div class="service-box text-center">
+            <div class="icon-box">
+              <i class="fa fa-html5 color-green"></i>
+            </div>
+            <div class="icon-text">
+              <h4 class="ser-text">HTML</h4>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6">
+          <div class="service-box text-center">
+            <div class="icon-box">
+              <i class="fa fa-css3 color-green"></i>
+            </div>
+            <div class="icon-text">
+              <h4 class="ser-text">CSS</h4>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6">
+          <div class="service-box text-center">
+            <div class="icon-box">
+              <i class="fa fa-joomla color-green"></i>
+            </div>
+            <div class="icon-text">
+              <h4 class="ser-text">Magento</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--/ work-shop-->
+  <!--Footer-->
+    <footer id="footer" class="footer">
+      <div class="container text-center">
+
+        <h3>Get Started With a Career</h3>
+
+
+
+
+        <!-- End newsletter-form -->
+        <ul class="social-links">
+          <li><a href="#link"><i class="fa fa-twitter fa-fw"></i></a></li>
+          <li><a href="#link"><i class="fa fa-facebook fa-fw"></i></a></li>
+          <li><a href="#link"><i class="fa fa-google-plus fa-fw"></i></a></li>
+          <li><a href="#link"><i class="fa fa-dribbble fa-fw"></i></a></li>
+          <li><a href="#link"><i class="fa fa-linkedin fa-fw"></i></a></li>
+        </ul>
+
+
+      </div>
+    </footer>
+    <!--/ Footer-->

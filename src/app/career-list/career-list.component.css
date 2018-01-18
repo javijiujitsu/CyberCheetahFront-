@@ -75,3 +75,36 @@ body {
 .orange-circle-link-greater-than {
     font-size: 1em;
 }
+
+@media ( min-width: 768px ) {
+    .grid-divider {
+        position: relative;
+        padding: 0;
+    }
+    .grid-divider>[class*='col-'] {
+        position: static;
+    }
+    .grid-divider>[class*='col-']:nth-child(n+2):before {
+        content: "";
+        border-left: 1px solid #DDD;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+    }
+    .col-padding {
+        padding: 0 15px;
+    }
+}
+
+.title {
+  color: #e61be0a6;
+
+}
+
+
+logo-responsive {
+  height: auto;
+  width: auto;
+  max-height: 50px;
+  max-height: 50px;
+}

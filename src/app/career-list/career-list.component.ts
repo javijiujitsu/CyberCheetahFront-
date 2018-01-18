@@ -15,7 +15,7 @@ import { CareerServiceService } from '../services/career-service.service';
 export class CareerListComponent implements OnInit {
    currentUser: any = {};
 
-    logoutError: string;
+
 
     careerArray: any[] = [];
     careerListError: string;
@@ -58,15 +58,7 @@ baseUrl = environment.apiBase;
       });
   } // close ngOnInit()
 
-  logMeOutPls() {
-    this.authThang.logout()
-      .then(() => {
-          this.routerThang.navigate(['/']);
-      })
-      .catch(() => {
-          this.logoutError = 'Log out went to 💩';
-      });
-  } // close logMeOutPls()
+
 
   getThemCareers() {
       this.careerThang.allCareers()
